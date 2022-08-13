@@ -1,0 +1,144 @@
+//functions
+
+@mixin size($ELwidth, $ELheight){
+    @if $ELheight == null {
+        width: $ELwidth;
+        height: $ELwidth;
+    }
+    @else {
+        width: $ELwidth;
+        height: $ELheight;
+    }
+}
+
+//fonts
+
+    // Montserrat
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+    // Kanit
+
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+//default
+
+$bordersize: 3.5px;
+
+//error
+
+$errorbackground: #2a2a2a;
+
+//scene
+
+$scenetextcolor: #cd3232;
+$scenetext_size: 48px;
+$error_numsize: 128px;
+
+$scenebordercolor: rgb(240, 238, 233);
+$scenebordersize: 3.5px;
+
+//main
+
+$goHomeButtoncolor: black;
+$goHomeButtonBackground: rgb(226, 226, 226);
+$subtitlespansize: 40px;
+
+.error{
+    background: $errorbackground;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;   
+    height: 575px;
+    z-index: 1;
+
+    div, span, a{
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .scene{
+        width: 100%;
+        white-space: pre-wrap;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+
+        &{
+            color: $scenetextcolor;
+        }
+        font: {
+            style: italic;
+            size: $scenetext_size;
+        }
+        border: {
+            top: $scenebordersize solid $scenebordercolor;
+            bottom: $scenebordersize solid $scenebordercolor;
+        }
+
+        span{
+            font-size: $error_numsize;
+            color: $scenetextcolor;
+            font-family: 'Kanit', sans-serif;
+            font-weight: 500;
+        }
+    }
+    .main{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        @include size(95%, 60%);
+
+        .subtitle{
+            height: 50%;
+            align-items: center;
+            display: flex;
+        }
+
+        .subtitle span{
+            font-weight: 500;
+            font-size: $subtitlespansize;
+            background: gray;
+            border-radius: 50px;
+            padding: $bordersize 25px;
+            box-sizing: content-box;
+            border: 5px solid #565656;
+        }
+        
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 60%;
+
+            .text{
+                white-space: pre-wrap;
+                display: flex;
+                text-align: center;
+                font-size: 25px;
+                margin-top: 10px;
+            }
+            .gohome{
+                padding: 10px 45px;
+                background: transparent;
+                border-radius: 7.5px;
+                border: $bordersize solid $goHomeButtonBackground;
+                cursor: pointer;
+                box-shadow: -25px -25px 0 rgba(0, 0, 0, .1875);
+                background-position: 0 0;
+                background-size: 500px 100px !important;
+                background: linear-gradient(45deg, #ea2362, rgb(242, 156, 71));
+                transition: all .5s ease 0s;
+                font-weight: 600;
+            }
+            .gohome:hover{
+                background-position: 90% 90%;
+            }
+        }
+    }
+}

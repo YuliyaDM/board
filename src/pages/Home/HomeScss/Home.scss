@@ -1,0 +1,38 @@
+$buttoncolor: black;
+
+.MainBoardsContainer{
+    position: absolute;
+    top: 10%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 5%;
+}
+
+.MainBoards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ButtonAddMainBoardContainer{
+    display: flex;
+    padding: 50px 0;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.ButtonAddMainBoardContainer button{
+    cursor: pointer;
+    padding: 15px 50px;
+    color: $buttoncolor;
+    margin: 0 auto;
+}
+
+/*
+@media screen and (max-width: 320px) {
+    .ButtonAddMainBoardContainer{
+        width: 80%;
+    }
+}
+*/

@@ -1,0 +1,48 @@
+$mainboardtitlecolor: #ffffff;
+$mainboardtitlesize: 32px;
+
+.MainBoardTitleContainer{
+    width: 20%;
+    height: 250px;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    box-sizing: content-box;
+    padding: 30px 10px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.MainBoardTitle{
+    text-transform: capitalize;
+    font-size: $mainboardtitlesize;
+    color: $mainboardtitlecolor;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+}   
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    .MainBoardTitleContainer{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .MainBoardTitleContainer{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+    .MainBoardTitleContainer{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px){
+    .MainBoardTitleContainer{
+        width: 40%;
+    }
+}

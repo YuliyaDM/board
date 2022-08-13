@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Trello-parody, Trello on React">
+    <meta name="robots" content="index"> <!-- Website -->
+    <meta name="og:author" content="Julia/Yuliya Pirogova">
+    <meta name="og:site_name" content="My-version-of-trello">
+    <meta name="og:description" content="My-trello-frontend. Actually, it's my first project on React)">
+    <meta name="og:title" content="So this is my first version of trello.">
+    <meta name="og:image:height" content="500px">
+    <meta name="og:image:width" content="500px">
+    <meta name="og:image" content="https://play-lh.googleusercontent.com/CiGs15N1e1tXrSnVLEY9jOnKi1oNzPQNRjqhR8fXE0pnu_bRyNmfc8xXr2VQUJTfJ9A">
+    <title>My-trello-frontend</title>
+    <link rel="shortcut icon" href="images/waterfall.png" id="shortcutIcon">
+    <link rel="stylesheet" href="WindowScss/window.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const LinkIcon = document.getElementById('shortcutIcon');
+        window.addEventListener('blur', () => {
+            //LinkIcon.href = 'images/moOkey.jpg';
+            let audio = new Audio();
+            audio.src = 'video/MmMMM-ChrimMAaa.mp4';
+            audio.play();
+        })
+        window.addEventListener('focus', () => {
+            LinkIcon.href = 'images/waterfall.png';
+        })
+    </script>
+</body>
+</html>
